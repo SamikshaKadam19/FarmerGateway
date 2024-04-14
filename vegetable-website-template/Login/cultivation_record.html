@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cultication From</title>
+<script src="Login.js"></script>
+<style>
+    /* Basic styling for the form */
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://wallpapercave.com/wp/wp1987061.jpg');
+        background-size: cover;
+        background-position: center; 
+    }
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+    h2 {
+        text-align: center;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button {
+  background-color: #04AA6D;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+    h2{
+        color: rgb(16, 215, 126);
+    }
+</style>
+</head>
+<body>
+
+<h2>Cultivation Form</h2>
+
+<form  method="post">
+    <label for="name">Crop Name</label>
+    <input type="text" id="name" name="name" required> <br> <br>
+
+    <label for="date">Date of Cultivation: </label> 
+    <input type="text" id="date of cultivation" name="date of cultivation" required> <br> <br>
+
+    <label for="period">Period of Harvest(in months): </label>
+    <input type="number" id="harvest" name="harvest" required> <br> <br>
+
+    <label for="land">Cultivation Land in Acres</label> 
+    <input type="number" id="land" name="land" required> 
+
+    <label for="pesticide">Required Pesticides</label>
+    <input type="text" id="pesticide" name="pesticide" required>
+
+    <label for="cost">Overall Cost</label>
+    <input type="number" id="cost" name="cost" required>
+
+    <label for="yield">Expected yield(in tonnes)</label>
+    <input type="number" id="yeild" name="yield" required>
+
+    <button type="button" onclick="submit()">Submit</button>
+
+</form>
+
+</body>
+</html>
