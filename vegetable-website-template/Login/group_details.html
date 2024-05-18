@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Group Details</h1>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>{{ group[1] }} (ID: {{ group[0] }})</h2>
+            </div>
+            <div class="card-body">
+                <p><strong>Group Leader:</strong> {{ group[2] }}</p>
+                <p><strong>Contact Info:</strong> {{ group[3] }}</p>
+                <p><strong>Location:</strong> {{ group[5] }}</p>
+                <p><strong>Formed Date:</strong> {{ group[6] }}</p>
+            </div>
+        </div>
+
+        <h3 class="mt-5">Members</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Member ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Contact Info</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for member in members %}
+                <tr>
+                    <td>{{ member[0] }}</td>
+                    <td>{{ member[2] }}</td>
+                    <td>{{ member[3] }}</td>
+                    <td>{{ member[4] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
