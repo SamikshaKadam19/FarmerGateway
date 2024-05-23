@@ -12,13 +12,12 @@
 
         <div class="card">
             <div class="card-header">
-                <h2>{{ group[1] }} (ID: {{ group[0] }})</h2>
+                <h2 id="group-id">Group ID : </h2>
             </div>
             <div class="card-body">
-                <p><strong>Group Leader:</strong> {{ group[2] }}</p>
-                <p><strong>Contact Info:</strong> {{ group[3] }}</p>
-                <p><strong>Location:</strong> {{ group[5] }}</p>
-                <p><strong>Formed Date:</strong> {{ group[6] }}</p>
+                <p><strong>Contact Info:</strong> <span id="contact-info"></span></p>
+                <p><strong>Location:</strong> <span id="location"></span></p>
+                <p><strong>Formed Date:</strong> <span id="formed-date"></span></p>
             </div>
         </div>
 
@@ -32,18 +31,38 @@
                     <th>Contact Info</th>
                 </tr>
             </thead>
-            <tbody>
-                {% for member in members %}
-                <tr>
-                    <td>{{ member[0] }}</td>
-                    <td>{{ member[2] }}</td>
-                    <td>{{ member[3] }}</td>
-                    <td>{{ member[4] }}</td>
-                </tr>
-                {% endfor %}
+            <tbody id="members-tbody">
+                <!-- Members will be dynamically inserted here -->
             </tbody>
         </table>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const groupId = 1; // Replace with actual group ID
+            fetch(`http://localhost:8080/api/group-details/${groupId}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('group-id').innerText = `Group ID: ${data.id}`;
+                    document.getElementById('contact-info').innerText = data.contactInfo;
+                    document.getElementById('location').innerText = data.location;
+                    document.getElementById('formed-date').innerText = data.formedDate;
+
+                    const membersTbody = document.getElementById('members-tbody');
+                    data.members.forEach(member => {
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td>${member.id}</td>
+                            <td>${member.name}</td>
+                            <td>${member.role}</td>
+                            <td>${member.contactInfo}</td>
+                        `;
+                        membersTbody.appendChild(tr);
+                    });
+                })
+                .catch(error => console.error('Error fetching group details:', error));
+        });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

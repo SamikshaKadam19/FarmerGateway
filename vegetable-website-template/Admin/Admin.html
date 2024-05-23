@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
     <link href="Admin.css" rel="stylesheet">
 </head>
 <body>
@@ -14,150 +14,153 @@
 				<i class="ph-list"></i>
 			</button>
 		</div>
-
 	</header>
 	
-		<div class="app-body-main-content">
-			<section class="service-section">
-				<h2>Admin Dashboard</h2>
-				<div class="service-section-header">
-					<div class="search-field">
-						<i class="ph-magnifying-glass"></i>
-						<input type="text" placeholder="Account number">
-					</div>
-					<div class="dropdown-field">
-						<select>
-							<option>Home</option>
-							<option>Work</option>
-						</select>
-						<i class="ph-caret-down"></i>
-					</div>
-					<button class="flat-button">
-						Search
-					</button>
+	<div class="app-body-main-content">
+		<section class="service-section">
+			<h2>Admin Dashboard</h2>
+			<div class="service-section-header">
+				<div class="search-field">
+					<i class="ph-magnifying-glass"></i>
+					<input type="text" placeholder="Group ID">
 				</div>
-				<div class="mobile-only">
-					<button class="flat-button">
-						Toggle search
-					</button>
+				<div class="dropdown-field">
+					<select>
+						<option>Home</option>
+						<option>Work</option>
+					</select>
+					<i class="ph-caret-down"></i>
 				</div>
-				<div class="tiles">
-					<article class="tile">
-						<div class="tile-header">
-							<i class="ph-lightning-light"></i>
-							<h1>
-								Total Farmers
-							</h1>
-						</div>
-						<a href="#">
-							<span>100+</span>
-							<span class="icon-button">
-								<i class="ph-caret-right-bold"></i>
-							</span>
-						</a>
-					</article>
-					<article class="tile">
-						<div class="tile-header">
-							<i class="ph-fire-simple-light"></i>
-							<h1>
-								Total Group of Farmers
-							</h1>
-						</div>
-						<a href="#">
-							<span>10+</span>
-							<span class="icon-button">
-								<i class="ph-caret-right-bold"></i>
-							</span>
-						</a>
-					</article>
-					<article class="tile">
-						<div class="tile-header">
-							<i class="ph-file-light"></i>
-							<h1>
-								Total Land under Cultivation
-							</h1>
-						</div>
-						<a href="#">
-							<span>50+ Acres</span>
-							<span class="icon-button">
-								<i class="ph-caret-right-bold"></i>
-							</span>
-						</a>
-					</article>
+				<button class="flat-button">
+					Search
+				</button>
+			</div>
+			<div class="mobile-only">
+				<button class="flat-button">
+					Toggle search
+				</button>
+			</div>
+			<div class="tiles">
+				<article class="tile">
+					<div class="tile-header">
+						<i class="ph-lightning-light"></i>
+						<h1>
+							Total Farmers
+						</h1>
+					</div>
+					<a href="#">
+						<span id="total-farmers">0</span>
+						<span class="icon-button">
+							<i class="ph-caret-right-bold"></i>
+						</span>
+					</a>
+				</article>
+				<article class="tile">
+					<div class="tile-header">
+						<i class="ph-fire-simple-light"></i>
+						<h1>
+							Total Group of Farmers
+						</h1>
+					</div>
+					<a href="#">
+						<span>10+</span>
+						<span class="icon-button">
+							<i class="ph-caret-right-bold"></i>
+						</span>
+					</a>
+				</article>
+				<article class="tile">
+					<div class="tile-header">
+						<i class="ph-file-light"></i>
+						<h1>
+							Total Land under Cultivation
+						</h1>
+					</div>
+					<a href="#">
+						<span>50+ Acres</span>
+						<span class="icon-button">
+							<i class="ph-caret-right-bold"></i>
+						</span>
+					</a>
+				</article>
+			</div>
+		</section>
+		<section class="transfer-section">
+			<div class="transfer-section-header">
+				<h2>Current Users</h2>
+				<div class="filter-options">
+					<!-- Filter options can be added here -->
 				</div>
-			</section>
-			<section class="transfer-section">
-				<div class="transfer-section-header">
-					<h2>Current Users</h2>
-					<div class="filter-options">
-						
-						<button class="icon-button">
-							<i class="ph-funnel"></i>
-						</button>
-						
-					</div>
-				</div>
-				<div class="transfers">
-					<div class="transfer">
-						<dl class="transfer-details">
-							<div>
-								<dt>USer name</dt>
-							</div>
-							<div>
-								<dt>Land</dt>
-							</div>
-							<div>
-								<dt>Contact no.</dt>
-							</div>
-                            <div class="transfer-number">
-                                <button class="btn"></button> 
-                                <button class="btn"></button>
-                            </div>
-						</dl>
-					</div>
-					<div class="transfer">
-						<dl class="transfer-details">
-							<div>
-								<dt>Farmer1</dt>
-							</div>
-							<div>
-								<dt>10</dt>
-							</div>
-							<div>
-								<dt>9876590764</dt>
-							</div>
-						</dl>
-						<div class="transfer-number">
-							<button class="btn">Modify</button> 
-                            <button class="btn">Delete</button>
-						</div>
-					</div>
-					<div class="transfer">
-						<dl class="transfer-details">
-							<div>
-								<dt>Farmer3</dt>
-							</div>
-							<div>
-								<dt>2228</dt>
-							</div>
-							<div>
-								<dt>22 Oct. 21</dt>
-							</div>
-						</dl>
-						<div class="transfer-number">
-							<button class="btn">Modify</button> 
-                            <button class="btn">Delete</button>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-		
-				
-					
-			</section>
-		</div>
+			</div>
+			<div class="transfers" id="farmer-list">
+				<!-- Farmer details will be inserted here by JavaScript -->
+			</div>
+		</section>
 	</div>
-</div>
+		
+	<script>
+		async function fetchFarmers() {
+			try {
+				const response = await fetch('http://localhost:8081/farmers'); // Adjust URL as needed
+				const farmers = await response.json();
+				const totalFarmers = farmers.length;
+				document.getElementById('total-farmers').textContent = totalFarmers;
+
+				const farmerList = document.getElementById('farmer-list');
+				farmerList.innerHTML = ''; // Clear existing content
+
+				farmers.forEach(farmer => {
+					const transferDiv = document.createElement('div');
+					transferDiv.classList.add('transfer');
+
+					const dl = document.createElement('dl');
+					dl.classList.add('transfer-details');
+
+					const userNameDiv = document.createElement('div');
+					const userNameDt = document.createElement('dt');
+					userNameDt.textContent = farmer.name;
+					userNameDiv.appendChild(userNameDt);
+
+					const landDiv = document.createElement('div');
+					const landDt = document.createElement('dt');
+					landDt.textContent = farmer.address; // Assuming 'address' represents land here
+					landDiv.appendChild(landDt);
+
+					const contactDiv = document.createElement('div');
+					const contactDt = document.createElement('dt');
+					contactDt.textContent = farmer.phoneNumber;
+					contactDiv.appendChild(contactDt);
+
+					dl.appendChild(userNameDiv);
+					dl.appendChild(landDiv);
+					dl.appendChild(contactDiv);
+
+					const transferNumberDiv = document.createElement('div');
+					transferNumberDiv.classList.add('transfer-number');
+
+					const modifyButton = document.createElement('button');
+					modifyButton.classList.add('btn');
+					modifyButton.textContent = 'Modify';
+
+					const deleteButton = document.createElement('button');
+					deleteButton.classList.add('btn');
+					deleteButton.textContent = 'Delete';
+
+					transferNumberDiv.appendChild(modifyButton);
+					transferNumberDiv.appendChild(deleteButton);
+
+					transferDiv.appendChild(dl);
+					transferDiv.appendChild(transferNumberDiv);
+
+					farmerList.appendChild(transferDiv);
+				});
+			} catch (error) {
+				console.error('Error fetching farmers:', error);
+			}
+		}
+
+		// Fetch farmers when the page loads
+		window.onload = fetchFarmers;
+	</script>
 </body>
 </html>
